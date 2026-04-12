@@ -12,12 +12,13 @@ const Settings = () => {
   const posthog = usePostHog();
 
   const handleSignOut = async () => {
-    posthog.capture("user_signed_out");
     try {
       await signOut();
+      posthog.capture("user_signed_out");
       // Only reset analytics after successful sign-out
       posthog.reset();
     } catch (error) {
+      posthog.capture("user_sign_out_failed");
       console.error("Sign-out failed:", error);
       // Don't reset analytics if sign-out failed
     }
