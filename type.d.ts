@@ -17,7 +17,7 @@ declare global {
     icon: ImageSourcePropType;
     name: string;
     plan?: string;
-    category?: string;
+    category: string;
     paymentMethod?: string;
     status?: string;
     startDate?: string;
@@ -26,6 +26,7 @@ declare global {
     billing: string;
     renewalDate?: string;
     color?: string;
+    frequency: string;
   }
 
   interface SubscriptionCardProps extends Omit<Subscription, "id"> {
