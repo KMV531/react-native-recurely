@@ -2,7 +2,7 @@ import { formatCurrency } from "@/lib/utils";
 import React from "react";
 import { Image, Text, View } from "react-native";
 
-const UpcomingSubscriptinCard = ({
+const UpcomingSubscriptionCard = ({
   name,
   price,
   currency,
@@ -34,4 +34,4 @@ const UpcomingSubscriptinCard = ({
   );
 };
 
-export default UpcomingSubscriptinCard;
+export default UpcomingSubscriptionCard;
